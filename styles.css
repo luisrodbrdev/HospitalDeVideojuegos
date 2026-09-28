@@ -158,14 +158,12 @@ a:focus-visible {
 }
 .hero-image {
   z-index: -2;
-  right: clamp(20px, 3vw, 48px);
-  top: 24px;
-  bottom: 24px;
-  width: 61%;
-  height: calc(100% - 48px);
+  right: 0;
+  width: 64%;
+  height: 100%;
   object-fit: cover;
   object-position: 54% center;
-  border-radius: var(--radius);
+  border-radius: var(--radius) 0 0 var(--radius);
   filter: saturate(1.04) contrast(1.06);
 }
 .hero-shade {
