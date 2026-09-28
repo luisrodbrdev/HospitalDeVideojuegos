@@ -1081,35 +1081,50 @@ a:focus-visible {
 }
 
 @media (max-width: 700px) {
-  .service-banner-switch {
+  .service-banner {
     height: auto;
     display: flex;
     flex-direction: column;
   }
-  .service-banner-switch > img {
+  .service-banner > img {
     position: relative;
     inset: auto;
+    flex: none;
     height: auto;
-    max-height: 550px;
-    aspect-ratio: 1;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
     object-position: center;
   }
-  .service-banner-switch:is(:hover, :focus-visible) > img {
+  .service-banner:is(:hover, :focus-visible) > img {
     transform: none;
   }
-  .service-banner-switch::after {
+  .service-banner::after {
     display: none;
   }
-  .service-banner-switch .service-banner-panel,
-  .service-banner-switch:is(:hover, :focus-visible) .service-banner-panel {
+  .service-banner .service-banner-panel,
+  .service-banner:is(:hover, :focus-visible) .service-banner-panel {
     position: relative;
     inset: auto;
+    width: 100%;
     padding: 24px;
     background: var(--service-bg);
     transform: none;
   }
-  .service-banner-switch .service-banner-details {
+  .service-banner .service-banner-panel h3 {
+    font-size: clamp(31px, 8vw, 40px);
+  }
+  .service-banner .service-banner-details {
     margin-top: 18px;
+  }
+  .service-banner .service-banner-details p {
+    gap: 10px;
+    padding-block: 10px;
+    font-size: 15px;
+  }
+  .service-banner .service-banner-details svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
